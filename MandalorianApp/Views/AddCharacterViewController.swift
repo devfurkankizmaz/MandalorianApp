@@ -183,7 +183,7 @@ class AddCharacterViewController: UIViewController {
 
         let imageURL = URL(string: imageURLString)
 
-        let character = MandalorianCharacter(name: name, type: type, description: description, imageUrl: imageURL, quote: quote)
+        let character = MandalorianCharacter(id: nil, name: name, type: type, description: description, imageUrl: imageURL, quote: quote)
 
         viewModel.addCharacter(character) { message, confirm in
             if confirm {

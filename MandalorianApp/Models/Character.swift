@@ -12,6 +12,7 @@ struct MandalorianCharacters: Codable {
 }
 
 struct MandalorianCharacter: Codable {
+    let id: String?
     let name: String
     let type: String
     let description: String

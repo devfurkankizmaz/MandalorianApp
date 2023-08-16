@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A1603B82A8CA63C00152AA2 /* URLEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1603B72A8CA63C00152AA2 /* URLEnum.swift */; };
 		0A96BC942A8938CC00CE7EC1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A96BC932A8938CC00CE7EC1 /* AppDelegate.swift */; };
 		0A96BC962A8938CC00CE7EC1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A96BC952A8938CC00CE7EC1 /* SceneDelegate.swift */; };
 		0A96BC9D2A8938CF00CE7EC1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A96BC9C2A8938CF00CE7EC1 /* Assets.xcassets */; };
@@ -40,6 +41,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0A1603B72A8CA63C00152AA2 /* URLEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLEnum.swift; sourceTree = "<group>"; };
 		0A96BC902A8938CC00CE7EC1 /* MandalorianApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MandalorianApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A96BC932A8938CC00CE7EC1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0A96BC952A8938CC00CE7EC1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -189,6 +191,7 @@
 			children = (
 				0A96BCDA2A893A6B00CE7EC1 /* Extensions.swift */,
 				0A96BCD92A893A6B00CE7EC1 /* Fonts.swift */,
+				0A1603B72A8CA63C00152AA2 /* URLEnum.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -305,6 +308,7 @@
 				0A96BCDB2A893A6B00CE7EC1 /* Fonts.swift in Sources */,
 				0AD857542A8BA40400C7E1FA /* AddCharacterViewModel.swift in Sources */,
 				0A96BCCE2A8939E900CE7EC1 /* CustomTextField.swift in Sources */,
+				0A1603B82A8CA63C00152AA2 /* URLEnum.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -17,7 +17,6 @@ class CharacterDetailViewController: UIViewController {
     
     private lazy var viewModel: CharacterDetailViewModel = {
         let vm = CharacterDetailViewModel()
-        vm.delegate = self
         return vm
     }()
     
@@ -281,11 +280,16 @@ class CharacterDetailViewController: UIViewController {
     // MARK: - Actions
     
     @objc func deleteButtonTapped() {
-        guard let indexPath = indexPath else { return }
         showDeleteConfirmationAlert(completion: { confirm in
             if confirm {
-                self.viewModel.deleteCharacter(at: indexPath)
-                self.dismiss(animated: true)
+                self.viewModel.deleteCharacter(character: self.character) { confirm, message in
+                    if confirm {
+                        self.delegate?.fetchCharacters()
+                        self.dismiss(animated: true)
+                    } else {
+                        self.showAlert(title: "Error", message: message)
+                    }
+                }
             }
         })
     }
@@ -303,14 +307,22 @@ class CharacterDetailViewController: UIViewController {
            let description = character?.description,
            let quote = quoteTextField.text
         {
-            newCharacter = MandalorianCharacter(name: name, type: type, description: description, imageUrl: character?.imageUrl ?? nil, quote: quote)
+            newCharacter = MandalorianCharacter(id: character?.id, name: name, type: type, description: description, imageUrl: character?.imageUrl ?? nil, quote: quote)
         }
         
         showEditConfirmationAlert(completion: { confirm in
-            if confirm, let char = newCharacter, let index = self.indexPath {
-                self.viewModel.updateCharacter(at: index, with: char)
-                self.quoteLabel.text = self.quoteTextField.text
-                self.protectView.isHidden = true
+            if confirm, let char = newCharacter {
+                self.viewModel.updateCharacter(character: char) { confirm, message in
+                    if confirm {
+                        self.showAlert(title: "Success", message: message)
+                        self.delegate?.fetchCharacters()
+                        self.quoteLabel.text = self.quoteTextField.text
+                        self.protectView.isHidden = true
+                    } else {
+                        self.showAlert(title: "Error", message: message)
+                    }
+                }
+                
             } else {
                 self.protectView.isHidden = true
             }
@@ -321,9 +333,5 @@ class CharacterDetailViewController: UIViewController {
 // MARK: - Extensions
 
 extension CharacterDetailViewController: CharacterListViewControllerDelegate {
-    func updateItem(at indexPath: IndexPath, with character: MandalorianCharacter) {}
-    
-    func deleteItem(indexPath: IndexPath) {}
-    
     func fetchCharacters() {}
 }

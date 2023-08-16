@@ -119,16 +119,6 @@ extension CharacterListViewController: UICollectionViewDataSource {
 }
 
 extension CharacterListViewController: UICollectionViewDelegateFlowLayout, CharacterListViewControllerDelegate {
-    func updateItem(at indexPath: IndexPath, with character: MandalorianCharacter) {
-        viewModel.updatedCharacter(at: indexPath, with: character)
-        fetchCharacters()
-    }
-
-    func deleteItem(indexPath: IndexPath) {
-        viewModel.deleteCharacter(at: indexPath)
-        fetchCharacters()
-    }
-
     func fetchCharacters() {
         viewModel.fetchCharacters { [weak self] success in
             if success {
@@ -155,6 +145,4 @@ extension CharacterListViewController: UICollectionViewDelegateFlowLayout, Chara
 
 protocol CharacterListViewControllerDelegate: AnyObject {
     func fetchCharacters()
-    func deleteItem(indexPath: IndexPath)
-    func updateItem(at indexPath: IndexPath, with character: MandalorianCharacter)
 }

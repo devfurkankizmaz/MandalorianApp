@@ -21,12 +21,19 @@ class AddCharacterViewModel {
             }
         }
 
-        guard validateCharacter(character) else {
+        guard let baseURL = APIBaseURL.development.url else {
+            completion("Invalid base URL format.", false)
+            return
+        }
+
+        let characterURL = baseURL.appendingPathComponent(APIEndpoint.characters.path)
+
+        guard self.validateCharacter(character) else {
             completion("Invalid character data. Please provide valid information.", false)
             return
         }
 
-        NetworkHelper.shared.request(url: "http://localhost:3000/characters", method: .post, parameters: params) { (result: Result<MandalorianCharacter, Error>) in
+        NetworkHelper.shared.request(url: characterURL, method: .post, parameters: params) { (result: Result<MandalorianCharacter, Error>) in
             switch result {
             case .success:
                 completion("The character has been successfully saved.", true)
