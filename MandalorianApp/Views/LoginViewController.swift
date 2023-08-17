@@ -75,15 +75,13 @@ class LoginViewController: UIViewController {
     private lazy var usernameTextField: MandalorianTextField = {
         let textField = MandalorianTextField()
         textField.customFont.name = AppFont.spaceMonoRegular.rawValue
-        textField.leftSymbol = (symbolName: "person.fill", symbolColor: .black)
+        textField.leftSymbol = (symbolName: "envelope.fill", symbolColor: .black)
         textField.alpha = 0.8
         textField.layer.borderColor = #colorLiteral(red: 0.4508578777, green: 0.9882974029, blue: 0.8376303315, alpha: 0.3978120279)
         textField.placeholderColor = #colorLiteral(red: 0, green: 0.02550378069, blue: 0.1968309283, alpha: 1)
         textField.placeholderOpacity = 0.4
-        textField.placeholder = "Enter Your Username..."
-
+        textField.placeholder = "Enter Your Email..."
         return textField
-        
     }()
     
     private lazy var passwordTextField: MandalorianTextField = {
@@ -147,7 +145,7 @@ class LoginViewController: UIViewController {
     private lazy var signUpButton: MandalorianButton = {
         let button = MandalorianButton()
         button.setTitle("Sign Up!", for: .normal)
-        // button.addTarget(self, action: #selector(signUpButtonTapped), for: .touchUpInside)
+        button.addTarget(self, action: #selector(signUpButtonTapped), for: .touchUpInside)
         button.layer.cornerRadius = 9
         button.layer.borderColor = #colorLiteral(red: 0.4508578777, green: 0.9882974029, blue: 0.8376303315, alpha: 0.3978120279)
         button.backgroundColor = #colorLiteral(red: 1, green: 0.8323456645, blue: 0.4732058644, alpha: 0.6218136329)
@@ -283,16 +281,26 @@ class LoginViewController: UIViewController {
     private lazy var viewModel = LoginViewModel()
     
     @objc func loginButtonTapped() {
-        let username = usernameTextField.text ?? ""
+        let email = usernameTextField.text ?? ""
         let password = passwordTextField.text ?? ""
+        
+        let input = Login(email: email, password: password)
 
-        viewModel.authenticate(username: username, password: password, completion: { [weak self] isAuthenticated in
-            if isAuthenticated {
-                let vc = CharacterListViewController()
-                self?.navigationController?.pushViewController(vc, animated: true)
+        viewModel.login(input, completion: { message, confirm in
+            if confirm {
+                print(message)
+                let characterVC = CharacterListViewController()
+                self.navigationController?.pushViewController(characterVC, animated: true)
             } else {
-                self?.showAlert(message: "Invalid username or password")
+                self.showAlert(title: "Error", message: message)
             }
+            
+            print(KeychainHelper.loadAccessToken()!)
         })
+    }
+    
+    @objc func signUpButtonTapped() {
+        let registerVc = RegisterViewController()
+        navigationController?.pushViewController(registerVc, animated: true)
     }
 }

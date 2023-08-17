@@ -70,7 +70,13 @@ class CharacterListViewController: UIViewController {
         let addButton = UIBarButtonItem(title: "", style: .plain, target: self, action: #selector(addCharacterButtonTapped))
         addButton.tintColor = #colorLiteral(red: 1, green: 0.8323456645, blue: 0.4732058644, alpha: 1)
         addButton.image = UIImage(systemName: "plus.app")
-        navigationItem.rightBarButtonItem = addButton
+
+        let profileButton = UIBarButtonItem(title: "", style: .plain, target: self, action: #selector(profileButtonTapped))
+        profileButton.tintColor = #colorLiteral(red: 1, green: 0.8323456645, blue: 0.4732058644, alpha: 1)
+        profileButton.image = UIImage(systemName: "person.crop.circle.fill")
+
+        navigationItem.rightBarButtonItems = [addButton, profileButton]
+
         navigationItem.title = "Characters"
         view.addSubviews(characterListCollectionView, spinner)
         view.backgroundColor = #colorLiteral(red: 0.9999960065, green: 1, blue: 1, alpha: 1)
@@ -95,6 +101,11 @@ class CharacterListViewController: UIViewController {
         let addCharacterVC = AddCharacterViewController()
         addCharacterVC.delegate = self
         present(addCharacterVC, animated: true)
+    }
+
+    @objc func profileButtonTapped() {
+        let profileVC = ProfileViewController()
+        present(profileVC, animated: true)
     }
 }
 

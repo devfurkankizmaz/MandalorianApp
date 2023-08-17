@@ -189,7 +189,6 @@ class AddCharacterViewController: UIViewController {
             if confirm {
                 self.delegate?.fetchCharacters()
                 self.showAlert(title: "Success", message: message)
-
             } else {
                 self.showAlert(title: "Error", message: message)
             }

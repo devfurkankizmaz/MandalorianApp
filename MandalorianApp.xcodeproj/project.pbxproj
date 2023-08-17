@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A130BD02A8DFA60003FBA19 /* LocationServicesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A130BCF2A8DFA60003FBA19 /* LocationServicesVC.swift */; };
 		0A1603B82A8CA63C00152AA2 /* URLEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1603B72A8CA63C00152AA2 /* URLEnum.swift */; };
+		0A6B55EF2A8E193D00C90AD8 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A6B55EE2A8E193D00C90AD8 /* RegisterViewController.swift */; };
 		0A96BC942A8938CC00CE7EC1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A96BC932A8938CC00CE7EC1 /* AppDelegate.swift */; };
 		0A96BC962A8938CC00CE7EC1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A96BC952A8938CC00CE7EC1 /* SceneDelegate.swift */; };
 		0A96BC9D2A8938CF00CE7EC1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A96BC9C2A8938CF00CE7EC1 /* Assets.xcassets */; };
@@ -38,10 +40,18 @@
 		0AD8574F2A8B92E500C7E1FA /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 0AD8574E2A8B92E500C7E1FA /* Alamofire */; };
 		0AD857522A8BA1A200C7E1FA /* AddCharacterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD857512A8BA1A200C7E1FA /* AddCharacterViewController.swift */; };
 		0AD857542A8BA40400C7E1FA /* AddCharacterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD857532A8BA40400C7E1FA /* AddCharacterViewModel.swift */; };
+		0AFC1D9B2A8E30A4002A55B1 /* Register.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AFC1D9A2A8E30A4002A55B1 /* Register.swift */; };
+		0AFC1D9D2A8E30FC002A55B1 /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AFC1D9C2A8E30FC002A55B1 /* RegisterViewModel.swift */; };
+		0AFC1D9F2A8E4941002A55B1 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AFC1D9E2A8E4941002A55B1 /* Login.swift */; };
+		0AFC1DA12A8E4DE2002A55B1 /* Keychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AFC1DA02A8E4DE2002A55B1 /* Keychain.swift */; };
+		0AFC1DA32A8E55B4002A55B1 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AFC1DA22A8E55B4002A55B1 /* ProfileViewController.swift */; };
+		0AFC1DA62A8E5638002A55B1 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AFC1DA52A8E5638002A55B1 /* ProfileViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0A130BCF2A8DFA60003FBA19 /* LocationServicesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationServicesVC.swift; sourceTree = "<group>"; };
 		0A1603B72A8CA63C00152AA2 /* URLEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLEnum.swift; sourceTree = "<group>"; };
+		0A6B55EE2A8E193D00C90AD8 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		0A96BC902A8938CC00CE7EC1 /* MandalorianApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MandalorianApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A96BC932A8938CC00CE7EC1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0A96BC952A8938CC00CE7EC1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -72,6 +82,12 @@
 		0AD8574B2A8B92C800C7E1FA /* NetworkHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkHelper.swift; sourceTree = "<group>"; };
 		0AD857512A8BA1A200C7E1FA /* AddCharacterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCharacterViewController.swift; sourceTree = "<group>"; };
 		0AD857532A8BA40400C7E1FA /* AddCharacterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCharacterViewModel.swift; sourceTree = "<group>"; };
+		0AFC1D9A2A8E30A4002A55B1 /* Register.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Register.swift; sourceTree = "<group>"; };
+		0AFC1D9C2A8E30FC002A55B1 /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
+		0AFC1D9E2A8E4941002A55B1 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
+		0AFC1DA02A8E4DE2002A55B1 /* Keychain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keychain.swift; sourceTree = "<group>"; };
+		0AFC1DA22A8E55B4002A55B1 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		0AFC1DA52A8E5638002A55B1 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +122,7 @@
 		0A96BC922A8938CC00CE7EC1 /* MandalorianApp */ = {
 			isa = PBXGroup;
 			children = (
+				0AFC1DA42A8E561E002A55B1 /* Samples */,
 				0AD857502A8B989400C7E1FA /* Services */,
 				0A96BCC62A8939AD00CE7EC1 /* Models */,
 				0A96BCC52A8939A200CE7EC1 /* ViewModels */,
@@ -152,6 +169,8 @@
 				0A96BCDF2A893E1900CE7EC1 /* CharacterListViewController.swift */,
 				0A96BCD02A8939FA00CE7EC1 /* LoginViewController.swift */,
 				0AD857512A8BA1A200C7E1FA /* AddCharacterViewController.swift */,
+				0A6B55EE2A8E193D00C90AD8 /* RegisterViewController.swift */,
+				0AFC1DA22A8E55B4002A55B1 /* ProfileViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -163,6 +182,8 @@
 				0A96BCE82A898B3700CE7EC1 /* CharacterDetailViewModel.swift */,
 				0A96BCEA2A898B4400CE7EC1 /* CharacterListViewModel.swift */,
 				0AD857532A8BA40400C7E1FA /* AddCharacterViewModel.swift */,
+				0AFC1D9C2A8E30FC002A55B1 /* RegisterViewModel.swift */,
+				0AFC1DA52A8E5638002A55B1 /* ProfileViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -172,6 +193,8 @@
 			children = (
 				0A96BCC72A8939BF00CE7EC1 /* Character.swift */,
 				0A96BCE32A89707F00CE7EC1 /* User.swift */,
+				0AFC1D9A2A8E30A4002A55B1 /* Register.swift */,
+				0AFC1D9E2A8E4941002A55B1 /* Login.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -192,6 +215,7 @@
 				0A96BCDA2A893A6B00CE7EC1 /* Extensions.swift */,
 				0A96BCD92A893A6B00CE7EC1 /* Fonts.swift */,
 				0A1603B72A8CA63C00152AA2 /* URLEnum.swift */,
+				0AFC1DA02A8E4DE2002A55B1 /* Keychain.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -202,6 +226,14 @@
 				0AD8574B2A8B92C800C7E1FA /* NetworkHelper.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		0AFC1DA42A8E561E002A55B1 /* Samples */ = {
+			isa = PBXGroup;
+			children = (
+				0A130BCF2A8DFA60003FBA19 /* LocationServicesVC.swift */,
+			);
+			path = Samples;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -293,22 +325,30 @@
 				0A96BCD12A8939FA00CE7EC1 /* LoginViewController.swift in Sources */,
 				0AD857522A8BA1A200C7E1FA /* AddCharacterViewController.swift in Sources */,
 				0A96BCC82A8939BF00CE7EC1 /* Character.swift in Sources */,
+				0AFC1DA62A8E5638002A55B1 /* ProfileViewModel.swift in Sources */,
 				0A96BCDE2A893B8000CE7EC1 /* LoginViewModel.swift in Sources */,
 				0A96BC942A8938CC00CE7EC1 /* AppDelegate.swift in Sources */,
 				0A96BCE02A893E1900CE7EC1 /* CharacterListViewController.swift in Sources */,
 				0A96BCCF2A8939E900CE7EC1 /* CustomButton.swift in Sources */,
 				0A96BCE42A89707F00CE7EC1 /* User.swift in Sources */,
 				0A96BCCD2A8939E900CE7EC1 /* CharacterCellView.swift in Sources */,
+				0A6B55EF2A8E193D00C90AD8 /* RegisterViewController.swift in Sources */,
+				0AFC1DA32A8E55B4002A55B1 /* ProfileViewController.swift in Sources */,
+				0A130BD02A8DFA60003FBA19 /* LocationServicesVC.swift in Sources */,
 				0A96BCDC2A893A6B00CE7EC1 /* Extensions.swift in Sources */,
+				0AFC1D9B2A8E30A4002A55B1 /* Register.swift in Sources */,
 				0A96BCE22A893E1F00CE7EC1 /* CharacterDetailViewController.swift in Sources */,
 				0AD8574C2A8B92C800C7E1FA /* NetworkHelper.swift in Sources */,
+				0AFC1D9F2A8E4941002A55B1 /* Login.swift in Sources */,
 				0A96BC962A8938CC00CE7EC1 /* SceneDelegate.swift in Sources */,
 				0A96BCEB2A898B4400CE7EC1 /* CharacterListViewModel.swift in Sources */,
 				0A96BCE92A898B3700CE7EC1 /* CharacterDetailViewModel.swift in Sources */,
+				0AFC1DA12A8E4DE2002A55B1 /* Keychain.swift in Sources */,
 				0A96BCDB2A893A6B00CE7EC1 /* Fonts.swift in Sources */,
 				0AD857542A8BA40400C7E1FA /* AddCharacterViewModel.swift in Sources */,
 				0A96BCCE2A8939E900CE7EC1 /* CustomTextField.swift in Sources */,
 				0A1603B82A8CA63C00152AA2 /* URLEnum.swift in Sources */,
+				0AFC1D9D2A8E30FC002A55B1 /* RegisterViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -450,10 +490,13 @@
 				DEVELOPMENT_TEAM = 9399X42BH3;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MandalorianApp/Info.plist;
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -477,10 +520,13 @@
 				DEVELOPMENT_TEAM = 9399X42BH3;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MandalorianApp/Info.plist;
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

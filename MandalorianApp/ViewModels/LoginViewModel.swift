@@ -1,16 +1,23 @@
+import Alamofire
 import Foundation
 
 class LoginViewModel {
-    typealias AuthenticationCallback = (Bool) -> Void
+    let url = "https://api.iosclass.live/v1/auth/login"
 
-    let mockUser = User(username: "Furkan", password: "123456")
+    func login(_ input: Login, completion: @escaping (String, Bool) -> Void) {
+        var params: Parameters = [
+            "email": input.email,
+            "password": input.password,
+        ]
 
-    func authenticate(username: String, password: String, completion: AuthenticationCallback) {
-        let isAuthenticated = (username == mockUser.username) && (password == mockUser.password)
-        if isAuthenticated {
-            completion(true)
-        } else {
-            completion(false)
+        NetworkHelper.shared.request(url: url, method: .post, parameters: params) { (result: Result<LoginResponse, Error>) in
+            switch result {
+            case .success(let data):
+                _ = KeychainHelper.saveAccessToken(token: data.accessToken)
+                completion("Logged in successfully.", true)
+            case .failure(let error):
+                completion(error.localizedDescription, false)
+            }
         }
     }
 }

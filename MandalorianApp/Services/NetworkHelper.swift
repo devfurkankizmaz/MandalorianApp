@@ -12,7 +12,8 @@ class NetworkHelper {
     ) {
         AF.request(url,
                    method: method,
-                   parameters: parameters).responseJSON { response in
+                   parameters: parameters,
+                   encoding: JSONEncoding.default).validate().responseJSON { response in
 
             switch response.result {
             case .success(let value):
